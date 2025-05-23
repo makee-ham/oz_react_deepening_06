@@ -1,5 +1,6 @@
 import React from 'react';
 import { dashboardStats } from '../../database/mockData';
+import { Outlet } from 'react-router-dom';
 function Dashboard() {
   return (
     <div>
@@ -16,6 +17,8 @@ function Dashboard() {
         <h3>수익</h3>
         <div className="stat-value">${dashboardStats.revenue}</div>
       </div>
+
+      <Outlet />
     </div>
   );
 }
